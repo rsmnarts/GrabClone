@@ -12,6 +12,7 @@
     "react-native": "0.57.7",
     "react-native-carousel": "^0.11.0",
     "react-native-gesture-handler": "^1.0.10",
+    "react-native-maps": "^0.22.1",
     "react-native-svg": "^8.0.8",
     "react-navigation": "^3.0.5"
   },

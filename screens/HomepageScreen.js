@@ -151,7 +151,7 @@ export default class HomepageScreen extends Component {
 
 		        <View style={[ styles.containerCardBottom, { marginBottom: 50 }]}>
 		          <View style={ styles.titleExploreGrab }>
-		            <Text style={{ fontSize: 25 }}> GrabFood's Best Eats </Text>
+		            <Text style={{ fontSize: 25, marginLeft: 10, marginBottom: 5 }}> GrabFood's Best Eats </Text>
 		          </View>
 		          <View style={{ paddingBottom: 10 }}>
 			          <ScrollView showsHorizontalScrollIndicator={false} horizontal={true} style={{ padding: 10, paddingBottom: 10 }} >
@@ -160,20 +160,23 @@ export default class HomepageScreen extends Component {
 					          	<View style={{ flex:1 }}>
 					          		<Image source={food.img} style={{ width: '100%', borderTopLeftRadius: 10, borderTopRightRadius: 10 }}/>
 					          	</View>
-					          	<View style={{ flex:1, padding: 5 }}>
-					          		<Text style={{ fontWeight: 'bold', fontSize: 18 }}>{food.title}</Text>
-					          		<Text style={{ fontSize: 12, color: 'lightgrey' }}>
-				          				<Icon name='star' type='FontAwesome' style={{ fontSize: 12, color: 'gold' }}/>
-				          				<Icon name='star' type='FontAwesome' style={{ fontSize: 12, color: 'gold' }}/>
-				          				<Icon name='star' type='FontAwesome' style={{ fontSize: 12, color: 'gold' }}/>
-				          				<Icon name='star' type='FontAwesome' style={{ fontSize: 12, color: 'gold' }}/>
-				          				<Icon name='star' type='FontAwesome' style={{ fontSize: 12, color: 'gold' }}/>  {food.reviews} reviews</Text>
-					          		<Text style={{ margin: 5 }}>{food.desc}</Text>
+					          	<View style={{ flex:1, bottom: 20, padding: 15, paddingBottom: 0 }}>
+					          		<Text style={{ fontWeight: 'bold', fontSize: 20, bottom: 5 }}>{food.title}</Text>
+			          					<View style={{ marginBottom: 5 }}>
+					          				<Text style={{ fontSize: 12, color: 'lightgrey' }}>
+					          					<Icon name='star' type='FontAwesome' style={{ fontSize: 11, color: 'gold' }}/>
+						          				<Icon name='star' type='FontAwesome' style={{ fontSize: 11, color: 'gold' }}/>
+						          				<Icon name='star' type='FontAwesome' style={{ fontSize: 11, color: 'gold' }}/>
+						          				<Icon name='star' type='FontAwesome' style={{ fontSize: 11, color: 'gold' }}/>
+						          				<Icon name='star' type='FontAwesome' style={{ fontSize: 11, color: 'gold' }}/>  {food.reviews} reviews
+					          				</Text>
+				          				</View>
+					          		<Text style={{ color: 'grey' }}>{food.desc}</Text>
 					          		<View style={{ alignItems: 'center', justifyContent: 'center'}}>
 					          			<Text style={{ color: '#00A5CF', fontWeight: 'bold', fontSize: 20, margin: 10 }}>Check it Out</Text>
 					          		</View>
 					          		<View style={{ borderWidth: 0.5, borderColor: 'lightgrey', marginVertical: 7  }} />
-					          		<Text style={{ fontWeight: 'bold', color: 'lightgrey', fontSize: 16 }}><Icon name='thumbs-o-up' type='FontAwesome' style={{ fontSize: 16 }} /> {food.like}</Text>
+					          		<Text style={{ fontWeight: 'bold', color: 'lightgrey', fontSize: 16, margin: 10, marginBottom: 0 }}><Icon name='thumbs-o-up' type='FontAwesome' style={{ fontSize: 16 }} /> {food.like}</Text>
 					          	</View>
 					          </View>			          		
 		          		)}
@@ -226,8 +229,8 @@ const styles = StyleSheet.create({
   },
   containerExploreCenter: {
     flex: 6,
-    marginVertical: 50,
-    marginBottom: 70
+    marginTop: 60,
+    marginBottom: 30
   },
   containerCardBottom: {
     flex: 6,
